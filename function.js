@@ -22,3 +22,15 @@ console.log(object);
 console.log(num);
 chgNum(num);
 console.log(num);
+
+// `arguments` 
+// `arguments` object is a useful tool for designing functions that do not require a predtermined number of arguments
+var sum = function() {
+	var len = arguments.length;
+	var total = 0;
+	for (var i = 0; i < len; i++) {
+		total += arguments[i];
+	}
+	return total;
+};
+console.log(sum(1,2,3,4,6));
