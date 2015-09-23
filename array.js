@@ -171,5 +171,7 @@ console.log(people);
 people.sort(age_compare);
 console.log(people);
 
-
-
+//join:
+var arr = [1,2,3,4];
+console.log(arr);
+console.log(arr.join(' xxx'));
