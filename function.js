@@ -74,3 +74,27 @@ if (true) {
 sayHey();
 // => ho
 sayHo();
+
+
+// Arrow Prone (ECMAScript 6)
+// The fat arrow is a new shorter way to write functions using `=>` instead of `function(){}`, and will look familiar to anyone who has used CoffeScript
+// In addition to the shorter syntax, the fat arrow also makes reading code clearer because `this` arguments is visually linked ot the rest of the code.
+
+// Seems nodejs doesn't support this syntax
+/**
+var VendingMachine = function () {
+	this.stock = ["Sgt. Pepper", "Choke", "Spite"];
+	return {
+			dispense: () => {
+				if (this.stock.length > 0) {
+					return this.stock.pop();
+				}
+			}
+	};
+};
+
+var popMachine = new VendingMachine();
+
+// => 'Spite'
+console.log(popMachine.dispense());
+**/
