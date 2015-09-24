@@ -98,3 +98,30 @@ var popMachine = new VendingMachine();
 // => 'Spite'
 console.log(popMachine.dispense());
 **/
+
+//Immediatly Invoked Function Expressions (IIFE)
+// he beauty of the IIFE is that it uses a unary expression to coerce a function declaration, which would normally need
+// to be explicitly called into a function expression that can self-execute. Internally, JavaScript is running a unary
+// operation on the function declaration. The result of that operation is the function expression, which is immediately
+// invoked with the trailing parentheses (). Besides being elegant code, the IIFE also affords the following:
+// 1> It provides a closure that prevents naming conflicts.
+// 2> It provides elegant block scoping.
+// 3> It prevents pollution of the global namespace.
+// 4> It promotes the developer to think in terms of modular code.
+    // The example shows not using IIFE which cause the pollution of the global namespace.
+var foo = "node";
+console.log("outside foo: " +foo);
+// the global `foo` is pollutioned by the inner `foo`
+for (var  x = 0; x < 1; x++) {
+    var foo = "bar";
+    console.log("inner foo: " +foo);
+}
+console.log("outside foo: "+foo);
+
+var a = 5;
+// IIFE: prevents global namespace pollution
+(function() {
+    var a = 6;
+    console.log(a);
+})();
+console.log(a);
