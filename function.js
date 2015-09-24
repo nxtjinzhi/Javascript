@@ -34,3 +34,43 @@ var sum = function() {
 	return total;
 };
 console.log(sum(1,2,3,4,6));
+
+
+
+// Function types
+// 1> function declarations
+// 2> function expressions
+// The only different between the two is when they are evaluated.
+// During parse time, Javascript moves all the function declarations to the top of the current scope, that's why it doesn't matter where declarative functions appear in the script body.
+//
+var sayHo;
+
+// => function
+console.log(typeof (sayHey))
+
+// => undefined
+console.log(typeof (sayHo))
+
+if (true) {
+	function sayHey() {
+		console.log("hey");
+	}
+
+	sayHo = function sayHo() {
+		console.log("ho");
+	}
+
+} else {
+	function sayHey() {
+		console.log("no");
+	}
+
+	sayHo = function sayHo() {
+		console.log("no");
+	}
+
+}
+// => no
+sayHey();
+// => ho
+sayHo();
