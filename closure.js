@@ -17,3 +17,18 @@ var a = 5;
 	console.log(a);
 })();
 console.log(a);
+
+// Closure example
+
+var hello = "hello";
+
+function outer(name) {
+	var hello = "hi",
+	    inner;
+	return inner = function() {
+		return hello + " " +name;
+	};
+}
+
+var name = outer("mark");
+console.log(name());
