@@ -1,0 +1,6 @@
+var declared x 1,324,208,556 ops/sec ±4.19% (84 runs sampled)
+non declared x 446,512,106 ops/sec ±1.37% (91 runs sampled)
+declare one time x 1,251,326,709 ops/sec ±5.05% (83 runs sampled)
+non declare one time x 443,782,483 ops/sec ±1.49% (90 runs sampled)
+Fastest is var declared
+
